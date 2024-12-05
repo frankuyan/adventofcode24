@@ -1,0 +1,1 @@
+print((lambda s: "Part 1: "+str(sum(abs(a-b)for a,b in zip(*s)))+" Part 2: "+str(sum(n*s[1].count(n)for n in s[0])))(list(map(sorted,zip(*[map(int,l.split())for l in open("/Users/frankyan/adventofcode24/day1/input.txt")])))))

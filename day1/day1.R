@@ -1,25 +1,6 @@
 
-solve_day1 <- function(input_data) {
-  # Split input into left and right lists
-  lines <- strsplit(input_data, "\n")
-  pairs <- do.call(rbind, lapply(lines, function(x) as.numeric(strsplit(x, "\\s+")[[1]])))
-  
-  left_list <- pairs[,1]
-  right_list <- pairs[,2]
-  
-  # Sort both lists
-  left_sorted <- sort(left_list)
-  right_sorted <- sort(right_list)
-  
-  # Calculate absolute differences and sum
-  total_distance <- sum(abs(left_sorted - right_sorted))
-  
-  return(total_distance)
-}
 
-
-
-input < - "77221   93653
+input_data <- "77221   93653
 61169   27995
 49546   69782
 11688   41563
@@ -1021,10 +1002,27 @@ input < - "77221   93653
 19976   46609" 
 
 
+solve_day1 <- function(input_data) {
+  # Split input into left and right lists
+  lines <- strsplit(input_data, "\n")
+  pairs <- do.call(rbind, lapply(lines, function(x) as.numeric(strsplit(x, "\\s+")[[1]])))
+  
+  left_list <- pairs[,1]
+  right_list <- pairs[,2]
+  
+  # Sort both lists
+  left_sorted <- sort(left_list)
+  right_sorted <- sort(right_list)
+  
+  # Calculate absolute differences and sum
+  total_distance <- sum(abs(left_sorted - right_sorted))
+  
+  return(total_distance)
+  print(total_distance)
+}
 
-result <- solve_day1(input)
-print(paste("Total distance:", result))
 
 
 
-
+result <- solve_day1(input_data)
+print(result)
