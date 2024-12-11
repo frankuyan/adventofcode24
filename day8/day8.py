@@ -13,12 +13,51 @@ from itertools import combinations
 
 
 
-file = 'day8/input.txt'
+file = open('day8/input.txt', 'r')
+input = file.readlines()
+file.close()
 
 
-def read_input(file):
-    with open(file) as f:
-        data = f.read().splitlines()
-    return data
 
+for line in input:
+    input[input.index(line)] = line.replace('\n', '')
+
+# The variable "output" is what will be printed
+output = ""
+
+# Calculate amount of antinodes
+
+
+#character search 
+characters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+antinodes = []
+
+for x in range(len(characters)):
+
+    i = characters.index(characters[x])
+
+    loc = []
+
+    for y in range(len(characters)):
+        if characters[x] in input[y]:
+            loc.append(y)
+
+        x = input[line]
+        for col in range(len(x)):
+
+
+
+#antinode calculation 
+
+
+
+
+
+# removing redundant nodes
+
+
+# removing out of bounds nodes
+
+
+# count of total valid nodes
 
