@@ -34,7 +34,7 @@ antinodes = []
 
 for x in range(len(characters)):
 
-    i = characters.index(characters[x])
+    ；i = characters.index(characters[x])
 
     loc = []
 
